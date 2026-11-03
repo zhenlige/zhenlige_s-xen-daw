@@ -1,0 +1,13 @@
+node_modules/
+dist/
+local_images/
+desktop.ini
+*.test.js
+vitest.*.js
+tests/artifacts/
+.publish/
+.vscode/
+tests/export-artifacts/
+.env
+.env.*
+!.env.example

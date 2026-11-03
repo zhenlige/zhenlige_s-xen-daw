@@ -1,4 +1,28 @@
-# JI-DAW Web
+# JI-DAW
+
+Current desktop application: [`desktop/`](desktop/). The existing browser application remains at the repository root.
+
+## Noncommercial fan-community source license
+
+Original JI-DAW material is available for noncommercial use, study, modification and free redistribution under [LICENSE](LICENSE). Keep attribution and notices, identify modifications, and provide corresponding source for redistributed modifications. Commercial use requires separate written permission. This custom noncommercial license is source-available, not an OSI open-source license.
+
+See [community guidelines](COMMUNITY_GUIDELINES.md) and [third-party notices](THIRD_PARTY_NOTICES.md). Dependencies, soundfonts, samples, fonts, icons and original works retain their own rights and terms; this project does not grant permissions it does not own.
+
+## Desktop application
+
+```powershell
+git clone https://github.com/Elisamin123456/JI-DAW.git
+cd JI-DAW
+git lfs install
+git lfs pull
+cd desktop
+npm install
+npm start
+```
+
+Windows: double-click `desktop/start-local.cmd` after obtaining the source. Requires Node.js 20.19 or newer. Default PC-98 soundfont and the six-track preset project are included. The optional `desktop/sound/Touhou.sf2` uses Git LFS. Desktop documentation: [desktop/README.md](desktop/README.md).
+
+## Existing web application
 
 仓库同时提供单轨模式 `single.html` 和完整多轨模式 `complete.html`，首页可选择进入。完整模式源码位于 `complete-src/`，可独立从本仓库构建。
 

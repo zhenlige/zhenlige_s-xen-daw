@@ -1,0 +1,90 @@
+JI-DAW 非商业同人社区源码授权协议 1.0
+JI-DAW Noncommercial Fan Community Source License 1.0
+License identifier: LicenseRef-JI-DAW-NC-1.0
+
+Copyright (c) 2026 Elisamin123456 and the respective contributors.
+本协议以中文正文为准。
+
+一、适用范围
+
+本协议只适用于本项目权利人有权授权、且未另行标注授权的原创源码、
+修改、配置及文档。第三方库、上游代码、采样、SoundFont、字体、图标、
+示例音乐及其他第三方内容不因放入本仓库而改用本协议；它们的权利归
+各自权利人，其授权条件以 THIRD_PARTY_NOTICES.md 及原始条款为准。
+本协议不授予授权人本身不拥有的任何权利。
+
+二、允许的非商业使用
+
+在遵守本协议的前提下，任何人均可免费为个人学习、研究、教学、
+非商业音乐制作及非商业同人创作使用、运行、复制、研究、修改本软件，
+并免费分享原版、修改版源码及编译后的软件。非商业社区可以免费组织
+交流、演示、教程及协作开发。
+
+三、署名与修改版分发
+
+分发本协议覆盖的内容或其修改版时，必须：
+1. 保留本协议、原作者与贡献者的版权声明，以及相关第三方声明。
+2. 在说明文档或发布页面明确署名 JI-DAW / Elisamin123456，并给出项目地址：
+   https://github.com/Elisamin123456/JI-DAW
+3. 明确说明修改事实、修改者及修改版与原项目的区别，不得冒充原作者发布。
+4. 对本协议覆盖的修改部分沿用本协议，提供可取得的对应修改源码、
+   必要构建说明及依赖清单。不得以混淆、加密或额外合同阻止接收者
+   行使本协议已经授予的非商业使用、修改与再分发权利。
+
+上述条件不替代第三方组件自己的许可证，也不得缩减其已有授权。
+
+四、商业使用须取得另行书面许可
+
+未经本项目相关权利人另行书面许可，不得以获取商业利益或金钱报酬为
+主要目的使用、分发、许可或提供本协议覆盖的软件及修改版。包括但不限于：
+出售软件或打包转售；付费下载、付费解锁功能；收费托管或收费提供软件
+服务；将软件作为收费产品、业务或有偿制作服务的组成部分；通过软件
+分发或服务中的广告、强制打赏、会员门槛等方式变相收费。
+
+与下载、功能、访问或服务没有交换条件的无条件自愿捐赠，不当然视为
+商业使用。若用途是否属于非商业存在疑问，应在使用前向权利人确认。
+第三方另行允许商业使用的组件，仍可依其原有许可证单独使用。
+
+五、同人创作与第三方权利
+
+使用者应尊重原作者、原作和其他同人创作者，保留应有署名，不抄袭、
+冒名或虚构官方授权、合作、推荐、认可等关系。涉及东方 Project 或
+其他作品的角色、音乐、图像、商标、音源或素材时，应自行取得所需
+授权并遵守该原作权利人的二次创作规范；本协议不是任何原作的授权。
+
+本软件、项目名称及所附素材不代表任何原作权利人的官方立场。
+用户独立创作的乐曲、工程、录音和其他输出的权利不自动转移给本项目，
+本协议也不要求这类独立作品公开源码；涉及软件本身受保护内容或第三方
+内容时，仍须分别遵守相关授权。商业目的使用本软件仍受第四条约束。
+
+COMMUNITY_GUIDELINES.md 是协作与社区交流规范；其管理措施不改变
+第三方许可证，也不产生对第三方作品的授权。
+
+六、终止
+
+违反本协议的，超出许可范围的使用不受本协议授权。使用者应停止违约
+行为，并联系相应权利人处理整改或取得额外许可。依法不得排除或限制
+的权利与例外，不因本协议受到排除或限制。
+
+七、免责声明
+
+本软件按“现状”提供，不作任何明示或默示担保，包括适销性、特定用途
+适用性和不侵权担保。在法律允许的最大范围内，权利人与贡献者不对
+因使用、无法使用或分发本软件所产生的损害、索赔或责任承担责任。
+
+八、性质说明
+
+这是允许查看、修改及非商业再分发源码的自定义授权。
+因包含非商业限制，它不是 OSI 定义的开源许可证，也不是 MIT、GPL、
+Apache 或 Creative Commons 标准许可证。不得将它宣传为上述许可。
+
+English summary (the Chinese text above governs):
+Original material controlled by JI-DAW's copyright holders may be used, studied,
+modified, and redistributed for noncommercial purposes, with attribution,
+retained notices, clear identification of changes, and corresponding source
+for redistributed modifications under these terms. Commercial use requires
+separate written permission. Third-party components and assets retain their
+own terms and are not relicensed here. No official endorsement or third-party
+IP permission is granted. Independently created outputs remain their creators'
+works, subject to applicable third-party rights. Provided as-is, without warranty.
+This is a source-available noncommercial license, not an OSI open-source license.

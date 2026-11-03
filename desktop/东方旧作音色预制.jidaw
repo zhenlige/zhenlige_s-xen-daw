@@ -1,0 +1,210 @@
+{
+  "version": 2,
+  "name": "东方旧作音色预制",
+  "bpm": 120,
+  "signature": "4/4",
+  "snap": 1,
+  "bars": 16,
+  "loop": true,
+  "metronome": false,
+  "swingEnabled": false,
+  "swingAmount": 50,
+  "pitchRatios": [
+    [
+      1,
+      1
+    ],
+    [
+      25,
+      24
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      45,
+      32
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      15,
+      8
+    ]
+  ],
+  "pitchMode": "chromatic",
+  "pitchTonic": 0,
+  "tuningSystem": "preset",
+  "tuningEdo": 12,
+  "harmonizeRatiosToEdo": false,
+  "tuningIntervals": [],
+  "tracks": [
+    {
+      "id": "track-d6f68d6d-b16a-44b0-ae6f-b3ecf9a949c9",
+      "type": "drum",
+      "name": "鼓组",
+      "color": "#f2b24d",
+      "volume": 0.8,
+      "pan": 0,
+      "muted": false,
+      "solo": false,
+      "height": 78,
+      "instrument": {
+        "kind": "sf2",
+        "name": "PC-98 Soundfont.sf2",
+        "programIndex": 143,
+        "missing": false,
+        "programName": "Standard Drums",
+        "bank": 128,
+        "bundledId": "pc98"
+      },
+      "notes": [],
+      "annotations": [],
+      "audioClips": [],
+      "drumVolumes": {}
+    },
+    {
+      "id": "track-7c802e7e-6cf6-4d93-990b-cbc582db9789",
+      "type": "instrument",
+      "name": "FM钢琴",
+      "color": "#69aef5",
+      "volume": 0.8,
+      "pan": 0,
+      "muted": false,
+      "solo": false,
+      "height": 78,
+      "instrument": {
+        "kind": "sf2",
+        "name": "PC-98 Soundfont.sf2",
+        "programIndex": 5,
+        "missing": false,
+        "programName": "FM Piano",
+        "bank": 0,
+        "bundledId": "pc98"
+      },
+      "notes": [],
+      "annotations": [],
+      "audioClips": [],
+      "drumVolumes": {}
+    },
+    {
+      "id": "track-942a8a6e-b565-4123-ac87-b4c10c5ee515",
+      "type": "instrument",
+      "name": "A.钢琴",
+      "color": "#ab87ef",
+      "volume": 0.8,
+      "pan": 0,
+      "muted": false,
+      "solo": false,
+      "height": 78,
+      "instrument": {
+        "kind": "sf2",
+        "name": "PC-98 Soundfont.sf2",
+        "programIndex": 0,
+        "missing": false,
+        "programName": "Acoustic Piano",
+        "bank": 0,
+        "bundledId": "pc98"
+      },
+      "notes": [],
+      "annotations": [],
+      "audioClips": []
+    },
+    {
+      "id": "track-e0e77e89-297b-40e8-bc85-5728196a3384",
+      "type": "instrument",
+      "name": "Bass",
+      "color": "#73d398",
+      "volume": 0.8,
+      "pan": 0,
+      "muted": false,
+      "solo": false,
+      "height": 78,
+      "instrument": {
+        "kind": "sf2",
+        "name": "PC-98 Soundfont.sf2",
+        "programIndex": 36,
+        "missing": false,
+        "programName": "Slap Bass 1",
+        "bank": 0,
+        "bundledId": "pc98"
+      },
+      "notes": [],
+      "annotations": [],
+      "audioClips": []
+    },
+    {
+      "id": "track-1cfdb1b6-d972-4778-bf8f-54f90f208ac6",
+      "type": "instrument",
+      "name": "吉他",
+      "color": "#f27992",
+      "volume": 0.8,
+      "pan": 0,
+      "muted": false,
+      "solo": false,
+      "height": 78,
+      "instrument": {
+        "kind": "sf2",
+        "name": "PC-98 Soundfont.sf2",
+        "programIndex": 27,
+        "missing": false,
+        "programName": "Clean Guitar",
+        "bank": 0,
+        "bundledId": "pc98"
+      },
+      "notes": [],
+      "annotations": [],
+      "audioClips": []
+    },
+    {
+      "id": "track-00a83cf6-79f5-4112-89ee-f16db170ff74",
+      "type": "instrument",
+      "name": "方波",
+      "color": "#6fd2d9",
+      "volume": 0.8,
+      "pan": 0,
+      "muted": false,
+      "solo": false,
+      "height": 78,
+      "instrument": {
+        "kind": "sf2",
+        "name": "PC-98 Soundfont.sf2",
+        "programIndex": 80,
+        "missing": false,
+        "programName": "Square Wave",
+        "bank": 0,
+        "bundledId": "pc98"
+      },
+      "notes": [],
+      "annotations": [],
+      "audioClips": []
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+
+import {makePincher} from './pincher.js'
+import {Grid} from './grid.js'
+import {Serializer} from './serialize.js'
+import {RootNote} from './note.js'
+import history from './history.js'
+
+export const stage = new Konva.Stage({
+	container: 'sequencer',
+	width: window.innerWidth,
+	height: window.innerHeight,
+	draggable: true
+})
+makePincher(stage)
+
+export const grid = new Grid(stage)
+export const rootlayer = new Konva.Layer()
+
+stage.add(grid)
+stage.add(rootlayer)
+
+stage.on('pointerclick', e => {
+	if (stage.isDragging() || stage.isPinching || e.evt.button != 0 || stage.isNoteDragging) return
+	history.snapshot()
+	const pos = stage.getRelativePointerPosition()
+	if (stage.cb) {
+		stage.cb.x = pos.x * 4
+		const root = Serializer.json2root(stage.cb)
+		root.playThis()
+		stage.cb = null
+	} else {
+		const root = new RootNote(stage, pos.x, pos.y, 48)
+		rootlayer.add(root)
+		root.playThis()
+	}
+	rootlayer.draw()
+})
+
+
+stage.on('dragmove', e => grid.adjust())
+stage.on('pinchmove', e => {
+//	console.log('pinching')
+	grid.drawScorelines()
+	grid.drawBeatlines()
+	grid.adjust()
+})
