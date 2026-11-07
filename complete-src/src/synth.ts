@@ -35,32 +35,96 @@ export interface SynthPreset {
 }
 
 export const SYNTH_INSTRUMENTS: readonly SynthPreset[] = [
-  { id: 'pure-sine', name: '纯正弦', description: '无附加泛音，最适合检查纯律拍频', layers: [{ waveform: 'sine', ratio: 1, gain: 1 }], attack: .01, decay: .05, sustain: .92, release: .18, level: .22 },
-  { id: 'fc-pulse-12', name: 'FC 脉冲 12.5%', description: '明亮纤细的早期 FC/NES 窄脉冲，无失谐、无音色低通', layers: [{ waveform: 'square', ratio: 1, gain: 1, pulseWidth: .125 }], attack: .004, decay: .08, sustain: .86, release: .09, level: .105 },
-  { id: 'fc-pulse-25', name: 'FC 脉冲 25%', description: '经典早期 FC/NES 脉冲音色，无失谐、无音色低通', layers: [{ waveform: 'square', ratio: 1, gain: 1, pulseWidth: .25 }], attack: .004, decay: .08, sustain: .86, release: .09, level: .115 },
-  { id: 'fc-pulse-50', name: 'FC 脉冲 50%', description: '饱满的早期 FC/NES 方波，无失谐、无音色低通', layers: [{ waveform: 'square', ratio: 1, gain: 1, pulseWidth: .5 }], attack: .004, decay: .08, sustain: .86, release: .09, level: .12 },
-  { id: 'fc-triangle', name: 'FC 32阶三角波', description: '按 FC/NES 的 32 阶序列重建，保留阶梯波泛音', layers: [{ waveform: 'triangle', ratio: 1, gain: 1, chipWave: 'fc-triangle' }], attack: .004, decay: .06, sustain: .94, release: .08, level: .18 },
-  { id: 'classic-triangle', name: '经典三角波', description: '柔和而清晰的经典合成器', layers: [{ waveform: 'triangle', ratio: 1, gain: 1 }], attack: .01, decay: .12, sustain: .74, release: .26, level: .2, filterRatio: 40, filterSustainRatio: 28, filterMin: 900, filterMax: 17000, filterQ: .1 },
-  { id: 'classic-square', name: '经典方波', description: '空心而有力、保留高频泛音的方波音色', layers: [{ waveform: 'square', ratio: 1, gain: 1 }], attack: .008, decay: .13, sustain: .66, release: .22, level: .12, filterRatio: 64, filterSustainRatio: 48, filterMin: 1200, filterMax: 17500, filterQ: .1 },
-  { id: 'classic-saw', name: '经典锯齿主奏', description: '明亮、保留高频泛音的模拟合成器主奏', layers: [{ waveform: 'sawtooth', ratio: 1, gain: 1 }], attack: .008, decay: .18, sustain: .6, release: .24, level: .11, filterRatio: 48, filterSustainRatio: 32, filterMin: 1100, filterMax: 17000, filterQ: .15 },
-  { id: 'pure-organ', name: '纯律风琴', description: '整数泛音叠加，不引入十二平均律失谐', layers: [
-    { waveform: 'sine', ratio: 1, gain: 1 }, { waveform: 'sine', ratio: 2, gain: .62 }, { waveform: 'sine', ratio: 3, gain: .38 },
-    { waveform: 'sine', ratio: 4, gain: .25 }, { waveform: 'sine', ratio: 5, gain: .16 }, { waveform: 'sine', ratio: 6, gain: .1 }
-  ], attack: .018, decay: .07, sustain: .92, release: .3, level: .22, filterRatio: 24, filterSustainRatio: 18, filterMin: 800, filterMax: 16000, filterQ: .1 },
-  { id: 'odd-reed', name: '奇次泛音簧管', description: '以奇次整数泛音构成的簧管音色', layers: [
-    { waveform: 'sine', ratio: 1, gain: 1 }, { waveform: 'sine', ratio: 3, gain: .42 }, { waveform: 'sine', ratio: 5, gain: .22 },
-    { waveform: 'sine', ratio: 7, gain: .13 }, { waveform: 'sine', ratio: 9, gain: .07 }
-  ], attack: .03, decay: .12, sustain: .8, release: .34, level: .2, filterRatio: 24, filterSustainRatio: 16, filterMin: 900, filterMax: 15500, filterQ: .25 },
-  { id: 'sub-bass', name: '纯律低音', description: '基频、低八度与整数泛音构成的稳定低音', layers: [
-    { waveform: 'sine', ratio: .5, gain: .52 }, { waveform: 'sine', ratio: 1, gain: 1 }, { waveform: 'triangle', ratio: 2, gain: .18 }
-  ], attack: .016, decay: .16, sustain: .7, release: .3, level: .22, filterRatio: 18, filterSustainRatio: 10, filterMin: 240, filterMax: 7000, filterQ: .15 },
-  { id: 'warm-pad', name: '纯律暖垫', description: '慢起音的整数泛音垫底音色，无拍频失谐', layers: [
-    { waveform: 'triangle', ratio: 1, gain: 1 }, { waveform: 'sine', ratio: 2, gain: .32 }, { waveform: 'sine', ratio: 3, gain: .16 }
-  ], attack: .38, decay: .55, sustain: .68, release: 1.2, level: .18, filterRatio: 24, filterSustainRatio: 14, filterMin: 700, filterMax: 14500, filterQ: .2 },
-  { id: 'crystal-bell', name: '水晶钟', description: '整数泛音钟声，适合展示长衰减纯律和弦', layers: [
-    { waveform: 'sine', ratio: 1, gain: 1 }, { waveform: 'sine', ratio: 2, gain: .66 }, { waveform: 'sine', ratio: 3, gain: .27 },
-    { waveform: 'sine', ratio: 4, gain: .2 }, { waveform: 'sine', ratio: 6, gain: .12 }
-  ], attack: .005, decay: 1.3, sustain: .05, release: 1.65, level: .2, filterRatio: 32, filterSustainRatio: 24, filterMin: 1000, filterMax: 17000, filterQ: .15 }
+  {
+    id: 'pure-sine', name: '纯正弦', description: '无附加泛音，最适合检查纯律拍频', layers: [
+      { waveform: 'sine', ratio: 1, gain: 1 },
+    ], attack: .01, decay: .05, sustain: .92, release: .18, level: .22,
+  },
+  {
+    id: 'fc-pulse-12', name: 'FC 脉冲 12.5%', description: '明亮纤细的早期 FC/NES 窄脉冲，无失谐、无音色低通', layers: [
+      { waveform: 'square', ratio: 1, gain: 1, pulseWidth: .125 },
+    ], attack: .004, decay: .08, sustain: .86, release: .09, level: .105,
+  },
+  {
+    id: 'fc-pulse-25', name: 'FC 脉冲 25%', description: '经典早期 FC/NES 脉冲音色，无失谐、无音色低通', layers: [
+      { waveform: 'square', ratio: 1, gain: 1, pulseWidth: .25 },
+    ], attack: .004, decay: .08, sustain: .86, release: .09, level: .115,
+  },
+  {
+    id: 'fc-pulse-50', name: 'FC 脉冲 50%', description: '饱满的早期 FC/NES 方波，无失谐、无音色低通', layers: [
+      { waveform: 'square', ratio: 1, gain: 1, pulseWidth: .5 },
+    ], attack: .004, decay: .08, sustain: .86, release: .09, level: .12,
+  },
+  {
+    id: 'fc-triangle', name: 'FC 32阶三角波', description: '按 FC/NES 的 32 阶序列重建，保留阶梯波泛音', layers: [
+      { waveform: 'triangle', ratio: 1, gain: 1, chipWave: 'fc-triangle' },
+    ], attack: .004, decay: .06, sustain: .94, release: .08, level: .18,
+  },
+  {
+    id: 'classic-triangle', name: '经典三角波', description: '柔和而清晰的经典合成器', layers: [
+      { waveform: 'triangle', ratio: 1, gain: 1 },
+    ], attack: .01, decay: .12, sustain: .74, release: .26, level: .2,
+    filterRatio: 40, filterSustainRatio: 28, filterMin: 900, filterMax: 17000, filterQ: .1,
+  },
+  {
+    id: 'classic-square', name: '经典方波', description: '空心而有力、保留高频泛音的方波音色', layers: [
+      { waveform: 'square', ratio: 1, gain: 1 },
+    ], attack: .008, decay: .13, sustain: .66, release: .22, level: .12, filterRatio: 64,
+    filterSustainRatio: 48, filterMin: 1200, filterMax: 17500, filterQ: .1,
+  },
+  {
+    id: 'classic-saw', name: '经典锯齿主奏', description: '明亮、保留高频泛音的模拟合成器主奏', layers: [
+      { waveform: 'sawtooth', ratio: 1, gain: 1 },
+    ], attack: .008, decay: .18, sustain: .6, release: .24, level: .11, filterRatio: 48,
+    filterSustainRatio: 32, filterMin: 1100, filterMax: 17000, filterQ: .15,
+  },
+  {
+    id: 'pure-organ', name: '纯律风琴', description: '整数泛音叠加，不引入十二平均律失谐', layers: [
+      { waveform: 'sine', ratio: 1, gain: 1 },
+      { waveform: 'sine', ratio: 2, gain: .62 },
+      { waveform: 'sine', ratio: 3, gain: .38 },
+      { waveform: 'sine', ratio: 4, gain: .25 },
+      { waveform: 'sine', ratio: 5, gain: .16 },
+      { waveform: 'sine', ratio: 6, gain: .1 },
+    ], attack: .018, decay: .07, sustain: .92, release: .3, level: .22, filterRatio: 24,
+    filterSustainRatio: 18, filterMin: 800, filterMax: 16000, filterQ: .1,
+  },
+  {
+    id: 'odd-reed', name: '奇次泛音簧管', description: '以奇次整数泛音构成的簧管音色', layers: [
+      { waveform: 'sine', ratio: 1, gain: 1 },
+      { waveform: 'sine', ratio: 3, gain: .42 },
+      { waveform: 'sine', ratio: 5, gain: .22 },
+      { waveform: 'sine', ratio: 7, gain: .13 },
+      { waveform: 'sine', ratio: 9, gain: .07 },
+    ], attack: .03, decay: .12, sustain: .8, release: .34, level: .2, filterRatio: 24,
+    filterSustainRatio: 16, filterMin: 900, filterMax: 15500, filterQ: .25,
+  },
+  {
+    id: 'sub-bass', name: '纯律低音', description: '基频、低八度与整数泛音构成的稳定低音', layers: [
+      { waveform: 'sine', ratio: .5, gain: .52 },
+      { waveform: 'sine', ratio: 1, gain: 1 },
+      { waveform: 'triangle', ratio: 2, gain: .18 },
+    ], attack: .016, decay: .16, sustain: .7, release: .3, level: .22, filterRatio: 18,
+    filterSustainRatio: 10, filterMin: 240, filterMax: 7000, filterQ: .15,
+  },
+  {
+    id: 'warm-pad', name: '纯律暖垫', description: '慢起音的整数泛音垫底音色，无拍频失谐', layers: [
+      { waveform: 'triangle', ratio: 1, gain: 1 },
+      { waveform: 'sine', ratio: 2, gain: .32 },
+      { waveform: 'sine', ratio: 3, gain: .16 },
+    ], attack: .38, decay: .55, sustain: .68, release: 1.2, level: .18, filterRatio: 24,
+    filterSustainRatio: 14, filterMin: 700, filterMax: 14500, filterQ: .2,
+  },
+  {
+    id: 'crystal-bell', name: '水晶钟', description: '整数泛音钟声，适合展示长衰减纯律和弦', layers: [
+      { waveform: 'sine', ratio: 1, gain: 1 },
+      { waveform: 'sine', ratio: 2, gain: .66 },
+      { waveform: 'sine', ratio: 3, gain: .27 },
+      { waveform: 'sine', ratio: 4, gain: .2 },
+      { waveform: 'sine', ratio: 6, gain: .12 },
+    ], attack: .005, decay: 1.3, sustain: .05, release: 1.65, level: .2, filterRatio: 32,
+    filterSustainRatio: 24, filterMin: 1000, filterMax: 17000, filterQ: .15,
+  },
 ] as const
 
 export const DEFAULT_SYNTH_ID = 'classic-triangle'

@@ -10,7 +10,7 @@ import { decodeTrackCode, encodeTrackCode, type TrackCodePayload } from './track
 import { edoGridPosition, edoHarmonizationActive, generateTwelveToneRatios, isLegacyPitchRatios, NATURAL_PITCH_CLASSES, nearestEdoGridFrequency, nearestTunedFrequency, PITCH_MODES, pitchClassSpelling, pitchNameForOffset, ratioEdoSteps, tunedFrequencyForMidiPitch, tuningPitches, tuningPitchName } from './tuning'
 import type { AudioClip, JiAnnotation, JiNote, JiProject, RatioSpec, Track, TuningInterval, TuningSystem } from './types'
 
-const $ = <T extends HTMLElement = HTMLInputElement>(selector: string): T => {
+const $ = <T extends Element = HTMLInputElement>(selector: string): T => {
   const element = document.querySelector<T>(selector)
   if (!element) throw new Error(`缺少界面元素：${selector}`)
   return element
@@ -316,7 +316,7 @@ const overviewContent = $('#overview-content')
 const overviewRuler = $('#overview-ruler')
 const overviewLanes = $('#overview-lanes')
 const pianoCanvas = $('#piano-canvas')
-const pianoSvg = $('#piano-svg') as unknown as SVGSVGElement
+const pianoSvg = $<SVGSVGElement>('#piano-svg')
 const pianoRuler = $('#piano-ruler')
 const pianoRulerContent = $('#piano-ruler-content')
 
